@@ -44,7 +44,7 @@ function decode(expr) {
     for (let i = 0; i < expr.length; i += 10) {
         let encodedChar = expr.slice(i, i + 10)
         if (encodedChar === '**********') {
-            decodedStr += ' ';
+            decodedString += ' ';
         } else {
             encodedChar = encodedChar.replace(/^0*/, '').replaceAll('10', '.').replaceAll(11, '-');
             decodedString += MORSE_TABLE[encodedChar];
